@@ -11,6 +11,6 @@ public class Main {
     public static void main(String[] args) {
         Blade.me().devMode(false)
                 .get("/hello", ((request, response) -> response.text("Hello World.")))
-                .openMonitor(false).listen(8080).start();
+                .enableMonitor(false).listen(8080).start();
     }
 }
