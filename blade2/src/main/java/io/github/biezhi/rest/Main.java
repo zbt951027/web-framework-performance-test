@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         Blade.me().devMode(false)
-                .get("/", ((request, response) -> response.text("Hello World.")))
+                .get("/hello", ((request, response) -> response.text("Hello World.")))
                 .openMonitor(false).listen(8080).start();
     }
 }

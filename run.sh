@@ -1,12 +1,17 @@
 #!/bin/bash
 
 app=$1
+version=1.0-SNAPSHOT
 
-cd $1
-mvn clean package
+cd $app
 
-if [ "$1" == "blade2" ]; then
-    java -Xmx4g -Xms4g -jar target/dist/$1-1.0-SNAPSHOT/$1-1.0-SNAPSHOT.jar
+if [ "$app" == "jfinal3" ]; then
+    mvn clean jetty:run
 else
-    java -Xmx4g -Xms4g -jar target/$1-1.0-SNAPSHOT.jar
+    mvn clean package
+    if [ "$app" == "blade2" ]; then
+        java -Xmx4g -Xms4g -jar target/dist/$app-$version/$app-$version.jar
+    else
+        java -Xmx4g -Xms4g -jar target/$app-$version.jar
+    fi
 fi

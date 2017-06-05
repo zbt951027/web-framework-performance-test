@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class HelloController {
 
-    @RequestMapping("/rest/hello")
+    @RequestMapping("/hello")
     @ResponseBody
     String hello() {
         return "Hello World";
     }
 
-    @RequestMapping("/rest/helloAsync")
+    @RequestMapping("/helloAsync")
     @ResponseBody
     @Async
     String helloAsync() {
