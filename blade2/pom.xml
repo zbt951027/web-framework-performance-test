@@ -65,7 +65,6 @@
                             <addClasspath>true</addClasspath>
                         </manifest>
                         <manifestEntries>
-                            <!-- 在Class-Path下添加配置文件的路径 -->
                             <Class-Path>resources/</Class-Path>
                         </manifestEntries>
                     </archive>
